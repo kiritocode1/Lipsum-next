@@ -1,9 +1,9 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hii lipsum fam :) 
+    <main className="container relative">
+      <div className="mx-auto flex flex-col items-center gap-2 py-8">
+        {/* Components here. */}
+      </div>
     </main>
   );
 }
