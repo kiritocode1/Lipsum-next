@@ -79,4 +79,4 @@ export const FlipWords = ({
       </motion.div>
     </AnimatePresence>
   );
-};
+}
