@@ -17,6 +17,7 @@ export default function Model({scrollProgress}) {
         height,
         0.3
     )
+    
 
     const { amplitude, waveLength } = {
         amplitude:0.5,
