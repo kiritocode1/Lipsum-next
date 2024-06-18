@@ -1,6 +1,8 @@
 import React, { useRef } from 'react'
 import { useControls } from 'leva';
 import { fragment, vertex } from './Shader';
+
+
 import { useFrame, useThree } from '@react-three/fiber';
 import { useTexture, useAspect } from '@react-three/drei'
 import * as THREE from 'three';
@@ -17,7 +19,7 @@ export default function Model({scrollProgress}) {
         height,
         0.3
     )
-    
+
 
     const { amplitude, waveLength } = {
         amplitude:0.5,
