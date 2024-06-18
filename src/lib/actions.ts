@@ -1,6 +1,8 @@
 import axios from "axios";
 
-const API_KEY = "";
+const API_KEY = {
+  apiKey: process.env.OPENAI_API_KEY,
+};
 
 const instance = axios.create({
   baseURL: "https://api.openai.com/v1",
