@@ -1,9 +1,4 @@
 import React, { useRef } from 'react'
-<<<<<<< HEAD
-import { useControls } from 'leva';
-import { fragment, vertex } from './Shader';
-
-=======
 
  const vertex = `
 varying vec2 vUv;
@@ -31,7 +26,6 @@ void main() {
     gl_FragColor = color;  
 }
 `
->>>>>>> 6928d168f85792b4f84197fe623f7b451cb6aa2d
 
 import { useFrame, useThree } from '@react-three/fiber';
 import { useTexture, useAspect } from '@react-three/drei'
