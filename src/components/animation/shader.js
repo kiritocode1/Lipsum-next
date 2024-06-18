@@ -12,7 +12,7 @@ void main() {
 
     gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
   }
-`
+`;
 
 export const fragment = `
 uniform sampler2D uTexture;
@@ -23,4 +23,4 @@ void main() {
     vec4 color = texture2D(uTexture, uv);
     gl_FragColor = color;  
 }
-`
+`;
