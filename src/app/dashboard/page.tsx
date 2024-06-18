@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
-const Dashboard: React.FC = () => {
+const Dashboard = () => {
   const [inputText, setInputText] = useState("");
   const [embedding, setEmbedding] = useState<any>(null);
   const [users, setUsers] = useState<
@@ -32,7 +32,7 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-primary p-8">
+    <div className="text-textPrimary min-h-screen bg-primary p-8">
       <motion.h1
         className="mb-8 text-center text-4xl font-bold text-accent"
         initial={{ opacity: 0, y: -50 }}
@@ -44,27 +44,25 @@ const Dashboard: React.FC = () => {
 
       <motion.div
         className="mb-8"
-        initial={{ y: "40px", opacity: 0 }}
+        initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-lg bg-secondary p-6 shadow-md">
+        <div className="p-6">
           <h2 className="mb-4 text-2xl font-semibold text-accent">
             Create Embedding
           </h2>
           <div className="mb-4 flex gap-4">
             <Input
               value={inputText}
-              onChange={(e: {
-                target: { value: React.SetStateAction<string> };
-              }) => setInputText(e.target.value)}
+              onChange={(e) => setInputText(e.target.value)}
               placeholder="Enter text for embedding"
-              className="text-textPrimary flex-grow rounded-md border-accent bg-secondary p-2"
+              className="flex-grow"
             />
             <Button
               onClick={handleCreateEmbedding}
-              className="text-textSecondary rounded-md bg-accent p-2"
+              className="text-textSecondary bg-accent"
             >
               Create Embedding
             </Button>
@@ -74,7 +72,7 @@ const Dashboard: React.FC = () => {
               <h3 className="text-xl font-semibold text-accent">
                 Embedding Result:
               </h3>
-              <pre className="text-textPrimary rounded-md bg-secondary p-2 text-sm">
+              <pre className="rounded-md bg-secondary p-2 text-sm">
                 {JSON.stringify(embedding, null, 2)}
               </pre>
             </div>
@@ -84,12 +82,12 @@ const Dashboard: React.FC = () => {
 
       <motion.div
         className="mb-8"
-        initial={{ y: "40px", opacity: 0 }}
+        initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.4 }}
         viewport={{ once: true }}
       >
-        <div className="rounded-lg bg-secondary p-6 shadow-lg">
+        <div className="p-6">
           <h2 className="mb-4 text-2xl font-semibold text-accent">
             User Management
           </h2>
@@ -100,7 +98,7 @@ const Dashboard: React.FC = () => {
               value={newUser.name}
               onChange={handleInputChange}
               placeholder="Enter user name"
-              className="text-textPrimary flex-grow rounded-md border border-accent bg-secondary p-2"
+              className="flex-grow"
             />
             <Input
               type="email"
@@ -108,17 +106,17 @@ const Dashboard: React.FC = () => {
               value={newUser.email}
               onChange={handleInputChange}
               placeholder="Enter user email"
-              className="text-textPrimary flex-grow rounded-md border border-accent bg-secondary p-2"
+              className="flex-grow"
             />
             <Button
               onClick={handleAddUser}
-              className="text-textSecondary rounded-md bg-accent p-2"
+              className="text-textSecondary bg-accent"
             >
               Add User
             </Button>
           </div>
           <h3 className="mb-4 text-xl font-semibold text-accent">Users List</h3>
-          <ul className="text-textPrimary list-inside list-disc rounded-md bg-primary p-4">
+          <ul className="list-inside list-disc rounded-md bg-secondary p-4">
             {users.map((user) => (
               <li key={user.id}>
                 {user.name} ({user.email})
