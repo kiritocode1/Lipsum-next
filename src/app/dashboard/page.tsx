@@ -62,7 +62,7 @@ const Dashboard = () => {
             />
             <Button
               onClick={handleCreateEmbedding}
-              className="text-textSecondary bg-accent"
+              className="text-textSecondary bg-accent hover:bg-accent/70"
             >
               Create Embedding
             </Button>
@@ -110,13 +110,13 @@ const Dashboard = () => {
             />
             <Button
               onClick={handleAddUser}
-              className="text-textSecondary bg-accent"
+              className="text-textSecondary bg-accent hover:bg-accent/70"
             >
               Add User
             </Button>
           </div>
           <h3 className="mb-4 text-xl font-semibold text-accent">Users List</h3>
-          <ul className="list-inside list-disc rounded-md bg-secondary p-4">
+          <ul className="list-inside list-disc rounded-md p-4 text-white">
             {users.map((user) => (
               <li key={user.id}>
                 {user.name} ({user.email})
